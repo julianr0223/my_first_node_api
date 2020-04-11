@@ -1,11 +1,11 @@
 // configuracion servidor
 const express = require('express')
-const bodyParser = require('body-parser');
 
 const app = express()
 
 // body parser
 // parse application/x-www-form-urlencoded
+const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }))
 
 // parse application/json
@@ -17,7 +17,7 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(dbConfig.url, {
+mongoose.connect(dbConfig.url_Atlas, {
     useNewUrlParser: true
 })
 .then(() => console.log('Conexión a base de datos exitosa'))

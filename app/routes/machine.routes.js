@@ -3,5 +3,5 @@ module.exports = (app) => {
 
     app.post('/machines', machineController.create)
 
-    app.get('/machines', machineController.findAll)
+    app.get('/machines', machineController.findAll)    
 }
